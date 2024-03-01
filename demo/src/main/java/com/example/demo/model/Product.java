@@ -1,9 +1,21 @@
 package com.example.demo.model;
 
-import java.time.LocalDate;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+import java.time.LocalDate;
+@Entity
+@Table(name = "product") //default
 public class Product {
+    @Id
     private Long productId;
+
+    public Product() {
+
+    }
 
     public String getName() {
         return name;
